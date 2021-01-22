@@ -1,15 +1,23 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/NossaMetodologia.module.css";
 import MainPage from "../components/MainPage";
+import ResponsiveEmbed from "react-responsive-embed";
+import MainPageTitle from "../components/MainPageTitle";
 
 export default function NossaMetodologia() {
   return (
     <MainPage currentMenu="nossa-metodologia">
-      <div className={styles.container}>
-        <Head>
-          <title>Nossa Metodologia</title>
-        </Head>
-        @TODO
+      <Head>
+        <title>Nossa Metodologia</title>
+      </Head>
+
+      <MainPageTitle title="Nossa Metodologia" />
+
+      <div className={styles.mainVideo}>
+        <ResponsiveEmbed
+          src="https://www.youtube.com/embed/ZtMzB5CoekE"
+          allowFullScreen
+        />
       </div>
     </MainPage>
   );
