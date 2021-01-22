@@ -12,12 +12,20 @@ import {
 const { SubMenu } = Menu;
 const { Header, Sider, Content } = Layout;
 
-export default function Drawer({ currentMenu, children }) {
+export default function Drawer({ currentMenu, children, noPadding }) {
   const onClickMenu = (e) => {
     console.log("click ", e);
   };
 
   const [collapsed, setCollapsed] = useState(false);
+
+  const contentStyle = noPadding
+    ? {}
+    : {
+        margin: "24px 16px",
+        padding: 24,
+        minHeight: 280,
+      };
 
   return (
     <S.Wrapper>
@@ -67,14 +75,7 @@ export default function Drawer({ currentMenu, children }) {
           </S.Nav>
         </Sider>
         <Layout className="site-layout">
-          <Content
-            className="site-layout-background"
-            style={{
-              margin: "24px 16px",
-              padding: 24,
-              minHeight: 280,
-            }}
-          >
+          <Content className="site-layout-background" style={contentStyle}>
             {children}
           </Content>
         </Layout>

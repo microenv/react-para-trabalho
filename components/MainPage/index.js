@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Drawer from "./Drawer";
 import * as S from "./styles";
 
-export default function MainPage({ children, currentMenu }) {
+export default function MainPage({ children, currentMenu, noPadding }) {
   // const [page, setPage] = useState({
   //   mobileOpen: false,
   // });
@@ -13,7 +13,9 @@ export default function MainPage({ children, currentMenu }) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Drawer currentMenu={currentMenu}>{children}</Drawer>
+      <Drawer currentMenu={currentMenu} noPadding={noPadding}>
+        {children}
+      </Drawer>
     </S.Wrapper>
   );
 }

@@ -1,0 +1,13 @@
+.banner {
+  background-image: url(https://miro.medium.com/max/3840/1*GK9vbx6L6IrrSRPSpGW_5g.png);
+  background-size: auto 800px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 800px;
+  background-color: #369;
+}
+
+.spacer {
+  height: 800px;
+  background: #5f4aaa;
+}

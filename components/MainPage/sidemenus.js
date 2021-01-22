@@ -24,7 +24,7 @@ export default [
     id: "comece-por-aqui",
     label: "Comece por Aqui",
     icon: PlayIcon,
-    linkTo: "/comece-por-aqui",
+    linkTo: "/aprender-react-do-zero",
   },
   {
     id: "html-css-javascript",
