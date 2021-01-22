@@ -1,59 +1,54 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import Page from "../components/Page";
-import "antd/dist/antd.css";
+import MainPage from "../components/MainPage";
 
 export default function Home() {
   return (
-    <Page currentMenu="home">
+    <MainPage currentMenu="home">
       <div className={styles.container}>
         <Head>
-          <title>Create Next App</title>
-          <link rel="icon" href="/favicon.ico" />
+          <title>
+            React Para Trabalho - Curso Grátis e Open Source para Aprender React
+          </title>
         </Head>
 
         <main className={styles.main}>
           <h1 className={styles.title}>
-            Welcome to <a href="https://nextjs.org">Next.js!</a>
+            Aprenda React <span>com vídeos!</span>
           </h1>
 
-          <p className={styles.description}>
-            Get started by editing{" "}
-            <code className={styles.code}>pages/index.js</code>
-          </p>
+          <p className={styles.description}>React Para Trabalho</p>
 
           <div className={styles.grid}>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h3>Documentation &rarr;</h3>
-              <p>Find in-depth information about Next.js features and API.</p>
+            <a href="/aprender-react-do-zero" className={styles.card}>
+              <h3>Começar do zero &rarr;</h3>
+              <p>Se você não sabe nada de React ou programação.</p>
             </a>
 
             <a href="https://nextjs.org/learn" className={styles.card}>
-              <h3>Learn &rarr;</h3>
-              <p>Learn about Next.js in an interactive course with quizzes!</p>
+              <h3>Nossa metodologia &rarr;</h3>
+              <p>Como nós vamos te ensinar a programar.</p>
             </a>
 
             <a
               href="https://github.com/vercel/next.js/tree/master/examples"
               className={styles.card}
             >
-              <h3>Examples &rarr;</h3>
-              <p>Discover and deploy boilerplate example Next.js projects.</p>
+              <h3>Totalmente grátis &rarr;</h3>
+              <p>Não precisa pagar para começar a estudar.</p>
             </a>
 
             <a
               href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
               className={styles.card}
             >
-              <h3>Deploy &rarr;</h3>
-              <p>
-                Instantly deploy your Next.js site to a public URL with Vercel.
-              </p>
+              <h3>Open Source &rarr;</h3>
+              <p>Gostaria de contribuir, deixando este curso ainda melhor?</p>
             </a>
           </div>
         </main>
 
-        <footer className={styles.footer}>
+        {/* <footer className={styles.footer}>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             target="_blank"
@@ -62,8 +57,8 @@ export default function Home() {
             Powered by{" "}
             <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
           </a>
-        </footer>
+        </footer> */}
       </div>
-    </Page>
+    </MainPage>
   );
 }

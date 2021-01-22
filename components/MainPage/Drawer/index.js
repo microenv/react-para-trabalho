@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as S from "./styles";
 import styled from "styled-components";
-import sidemenus from "../../../config/sidemenus";
+import sidemenus from "../sidemenus";
 import { Divider, Menu, Layout } from "antd";
 import {
   AppstoreOutlined,
@@ -12,7 +12,7 @@ import {
 const { SubMenu } = Menu;
 const { Header, Sider, Content } = Layout;
 
-export default function Drawer({ currentMenu }) {
+export default function Drawer({ currentMenu, children }) {
   const onClickMenu = (e) => {
     console.log("click ", e);
   };
@@ -51,31 +51,17 @@ export default function Drawer({ currentMenu }) {
           <S.Nav>
             <Menu
               onClick={onClickMenu}
-              defaultSelectedKeys={[]}
+              defaultSelectedKeys={[currentMenu]}
               defaultOpenKeys={[]}
               mode="inline"
               theme="dark"
             >
-              {sidemenus.map(({ id: menuId, title, menus }, mainIndex) => {
-                const menuContent = menus.map(
-                  ({ icon: Icon, id, label }, menuIndex) => {
-                    return (
-                      <Menu.Item key={`${menuId}${menuIndex}`} icon={<Icon />}>
-                        {label}
-                      </Menu.Item>
-                    );
-                  }
+              {sidemenus.map(({ id, label, icon: Icon, linkTo }, mainIndex) => {
+                return (
+                  <Menu.Item key={`${id || mainIndex}`} icon={<Icon />}>
+                    <a href={linkTo}>{label}</a>
+                  </Menu.Item>
                 );
-
-                if (title) {
-                  return (
-                    <SubMenu title={title} key={`${menuId}`}>
-                      {menuContent}
-                    </SubMenu>
-                  );
-                }
-
-                return menuContent;
               })}
             </Menu>
           </S.Nav>
@@ -89,7 +75,7 @@ export default function Drawer({ currentMenu }) {
               minHeight: 280,
             }}
           >
-            Content
+            {children}
           </Content>
         </Layout>
       </Layout>
