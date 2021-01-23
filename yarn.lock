@@ -236,10 +236,15 @@
   resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.7.5.tgz#77211291c1900a700b8a78cfafda3160d76949ed"
   integrity sha512-OWORNpfjMsSSUBVrRBVGECkhWcULOAJz9ZW8uK9qgxD+87M7jHRcvh/A96XXNhXTLmKcoYSQtBEX7lHMO7YRwg==
 
-"@fontsource/lato@^4.1.0":
+"@fontsource/baloo-tamma-2@^4.1.0":
   version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-4.1.0.tgz#a510e063c50974fe0a3631ec9a8d2fac95d7c50d"
-  integrity sha512-AkD7RiL60Cjsp6qVyjEM+X3nGsk1eO4SsNB7yVBADlBR6IogJno7wzZ4vGHbDTGuxge2LV1FR7peBuT95cHifw==
+  resolved "https://registry.yarnpkg.com/@fontsource/baloo-tamma-2/-/baloo-tamma-2-4.1.0.tgz#cfbdcd9a776c73b753a4f11192076d90f95dc7b0"
+  integrity sha512-iP6rYQVtbFpkvGbE4R0l/F5C2QM+7n1N2XY/1e67hSK6r15+hALsjWp/csCwlfJk71bjCW1fkUTgwteEhr60lA==
+
+"@fontsource/patua-one@^4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/patua-one/-/patua-one-4.1.0.tgz#b066247c5c32b619371fbb0217e872998fd433bd"
+  integrity sha512-7ZCyajlNSWSPPryR5DkROtoZptB4kRYpVbNMLUZVfRNtpepFBe/8qSGGqT87GFjrZfs+zI+gorHHlemPejc0qQ==
 
 "@hapi/accept@5.0.1":
   version "5.0.1"

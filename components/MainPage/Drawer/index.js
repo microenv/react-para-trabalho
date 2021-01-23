@@ -27,6 +27,8 @@ export default function Drawer({ currentMenu, children, noPadding }) {
         minHeight: 280,
       };
 
+  // contentStyle.borderLeft = "5px solid #61dbfb";
+
   return (
     <S.Wrapper>
       <Layout hasSider={true}>
@@ -34,7 +36,7 @@ export default function Drawer({ currentMenu, children, noPadding }) {
           trigger={null}
           collapsible
           collapsed={collapsed}
-          width={350}
+          width={290}
           style={{ minHeight: "100vh" }}
           breakpoint="lg"
           collapsedWidth="0"
@@ -45,6 +47,7 @@ export default function Drawer({ currentMenu, children, noPadding }) {
           onCollapse={(collapsed, type) => {
             console.log("onCollapse", collapsed, type);
           }}
+          className="main-sider"
         >
           <S.Header>
             <S.HeaderImage
@@ -66,7 +69,11 @@ export default function Drawer({ currentMenu, children, noPadding }) {
             >
               {sidemenus.map(({ id, label, icon: Icon, linkTo }, mainIndex) => {
                 return (
-                  <Menu.Item key={`${id || mainIndex}`} icon={<Icon />}>
+                  <Menu.Item
+                    key={`${id || mainIndex}`}
+                    icon={<Icon />}
+                    className="drawer-menu-item"
+                  >
                     <a href={linkTo}>{label}</a>
                   </Menu.Item>
                 );

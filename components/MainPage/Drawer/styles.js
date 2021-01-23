@@ -4,6 +4,14 @@ export const Wrapper = styled.nav`
   background-color: #eee;
   background-image: linear-gradient(to bottom right, #fff, #eee);
   min-height: 100vh;
+
+  .ant-menu.ant-menu-dark .ant-menu-item-selected.drawer-menu-item {
+    background-color: #226;
+  }
+
+  .main-sider {
+    border-right: 5px solid #226;
+  }
 `;
 
 export const Header = styled.div`
