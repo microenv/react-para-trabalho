@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import * as S from "./styles";
 import styled from "styled-components";
 import sidemenus from "../sidemenus";
-import { Divider, Menu, Layout } from "antd";
+import { Divider, Menu, Layout, Affix } from "antd";
 import {
   AppstoreOutlined,
   MailOutlined,
@@ -49,40 +49,44 @@ export default function Drawer({ currentMenu, children, noPadding }) {
           }}
           className="main-sider"
         >
-          <S.Header>
-            <S.HeaderImage
-              src="https://ionicframework.com/docs/assets/icons/logo-react-icon.png"
-              alt="React Para Trabalho"
-            />
-            <S.HeaderTitle>React Para Trabalho</S.HeaderTitle>
-            <S.HeaderSubtitle>
-              Aprenda React do zero até nível senior
-            </S.HeaderSubtitle>
-          </S.Header>
-          <S.Nav>
-            <Menu
-              onClick={onClickMenu}
-              defaultSelectedKeys={[currentMenu]}
-              defaultOpenKeys={[]}
-              mode="inline"
-              theme="dark"
-            >
-              {sidemenus.map(({ id, label, icon: Icon, linkTo }, mainIndex) => {
-                return (
-                  <Menu.Item
-                    key={`${id || mainIndex}`}
-                    icon={<Icon />}
-                    className="drawer-menu-item"
-                  >
-                    <a href={linkTo}>{label}</a>
-                  </Menu.Item>
-                );
-              })}
-            </Menu>
-          </S.Nav>
+          <Affix>
+            <S.Header>
+              <S.HeaderImage
+                src="https://ionicframework.com/docs/assets/icons/logo-react-icon.png"
+                alt="React Para Trabalho"
+              />
+              <S.HeaderTitle>React Para Trabalho</S.HeaderTitle>
+              <S.HeaderSubtitle>
+                Aprenda React do zero até nível senior
+              </S.HeaderSubtitle>
+            </S.Header>
+            <S.Nav>
+              <Menu
+                onClick={onClickMenu}
+                defaultSelectedKeys={[currentMenu]}
+                defaultOpenKeys={[]}
+                mode="inline"
+                theme="dark"
+              >
+                {sidemenus.map(
+                  ({ id, label, icon: Icon, linkTo }, mainIndex) => {
+                    return (
+                      <Menu.Item
+                        key={`${id || mainIndex}`}
+                        icon={<Icon />}
+                        className="drawer-menu-item"
+                      >
+                        <a href={linkTo}>{label}</a>
+                      </Menu.Item>
+                    );
+                  }
+                )}
+              </Menu>
+            </S.Nav>
+          </Affix>
         </Sider>
         <Layout className="site-layout">
-          <Content className="site-layout-background" style={contentStyle}>
+          <Content className="site-layout-content" style={contentStyle}>
             {children}
           </Content>
         </Layout>

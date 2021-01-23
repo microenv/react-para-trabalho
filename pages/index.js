@@ -25,23 +25,17 @@ export default function Home() {
               <p>Se você não sabe nada de React ou programação.</p>
             </a>
 
-            <a href="https://nextjs.org/learn" className={styles.card}>
+            <a href="/nossa-metodologia" className={styles.card}>
               <h3>Nossa metodologia &rarr;</h3>
               <p>Como nós vamos te ensinar a programar.</p>
             </a>
 
-            <a
-              href="https://github.com/vercel/next.js/tree/master/examples"
-              className={styles.card}
-            >
+            <a href="/open-source" className={styles.card}>
               <h3>Totalmente grátis &rarr;</h3>
               <p>Não precisa pagar para começar a estudar.</p>
             </a>
 
-            <a
-              href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              className={styles.card}
-            >
+            <a href="/open-source" className={styles.card}>
               <h3>Open Source &rarr;</h3>
               <p>Gostaria de contribuir, deixando este curso ainda melhor?</p>
             </a>

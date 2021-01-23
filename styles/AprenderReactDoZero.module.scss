@@ -1,0 +1,52 @@
+.contentWrapper {
+  position: relative;
+  background-color: #5f4aaa;
+}
+
+x.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-image: url(https://miro.medium.com/max/3840/1*GK9vbx6L6IrrSRPSpGW_5g.png);
+  background-size: 1200px auto;
+  background-position: left top;
+  background-repeat: no-repeat;
+  height: 670px;
+  background-color: #5f4aaa;
+}
+
+.content {
+  position: relative;
+  z-index: 5;
+  padding: 30px;
+  background: #5f4aaa;
+  // color: #a9f;
+  color: #cbf;
+  background-image: url(https://miro.medium.com/max/3840/1*GK9vbx6L6IrrSRPSpGW_5g.png);
+  background-size: 1200px auto;
+  background-position: left top;
+  background-repeat: no-repeat;
+  min-height: 670px;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #00dbff;
+  }
+}
+
+.firstParagraph {
+  margin: 0;
+  max-width: 400px;
+  font-size: 22px;
+}
+
+.firstVideo {
+  padding: 40px;
+  max-width: 1200px;
+}
