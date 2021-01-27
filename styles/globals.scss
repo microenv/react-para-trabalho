@@ -2,6 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  font-size: 16px;
 }
 
 html,
@@ -33,4 +34,27 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+p {
+  font-size: 20px;
+}
+
+.page-content {
+  padding: 0 30px;
+  max-width: 1200px;
+}
+
+/** Sessões que possuem background escuro, então o texto precisa ser claro */
+.dark-section {
+  color: #cbf;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #00dbff;
+  }
 }

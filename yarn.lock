@@ -1784,6 +1784,33 @@ extglob@^2.0.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
+falcor-json-graph@^1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/falcor-json-graph/-/falcor-json-graph-1.1.7.tgz#81d6a456ad14e04b13d8cf8265836acbf7a3053b"
+  integrity sha1-gdakVq0U4EsT2M+CZYNqy/ejBTs=
+  dependencies:
+    falcor-path-syntax "0.2.4"
+
+falcor-path-syntax@0.2.4, falcor-path-syntax@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/falcor-path-syntax/-/falcor-path-syntax-0.2.4.tgz#6e72ba0bc236f4dda73040a001652792a32d8fc8"
+  integrity sha1-bnK6C8I29N2nMECgAWUnkqMtj8g=
+
+falcor-path-utils@^0.7.5:
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/falcor-path-utils/-/falcor-path-utils-0.7.5.tgz#3ba5884ab7393bb740132745b69d3eae4c6b12e7"
+  integrity sha512-QOdDXQ2mZ/VkIx8B2D8D/izAsFQFt/PlhE8/RNm9oIMgcPP0IIOV7b4Wj2feUBHdW1TdWCLoRRKQUnoYVbvZoQ==
+
+falcor@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/falcor/-/falcor-2.2.2.tgz#39e3a313bfb2899228dbd77758e79b076c055083"
+  integrity sha512-bYcHjFOMrQMm/h2cFE8WTzBIy0iKzkXougTMl9B4F18iBbjziyiMo1d/UbDcIv+7wbKrlxxCJp+tABYSBWGikg==
+  dependencies:
+    falcor-json-graph "^1.1.7"
+    falcor-path-syntax "^0.2.4"
+    falcor-path-utils "^0.7.5"
+    symbol-observable "^1.2.0"
+
 fast-deep-equal@^3.1.1:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
@@ -4311,6 +4338,11 @@ supports-color@^7.1.0:
   integrity sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==
   dependencies:
     has-flag "^4.0.0"
+
+symbol-observable@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
+  integrity sha512-e900nM8RRtGhlV36KGEU9k65K3mPb1WV70OdjfxlG2EAuM1noi/E/BaW/uMhL7bPEssK8QV57vN3esixjUvcXQ==
 
 tapable@^1.0.0, tapable@^1.1.3:
   version "1.1.3"

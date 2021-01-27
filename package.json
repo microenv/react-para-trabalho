@@ -12,6 +12,7 @@
     "@fontsource/baloo-tamma-2": "^4.1.0",
     "@fontsource/patua-one": "^4.1.0",
     "antd": "^4.10.3",
+    "falcor": "^2.2.2",
     "next": "10.0.5",
     "react": "17.0.1",
     "react-dom": "17.0.1",

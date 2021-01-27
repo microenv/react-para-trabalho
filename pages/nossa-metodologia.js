@@ -3,6 +3,8 @@ import styles from "../styles/NossaMetodologia.module.css";
 import MainPage from "../components/MainPage";
 import ResponsiveEmbed from "react-responsive-embed";
 import MainPageTitle from "../components/MainPageTitle";
+import Modal from "antd/lib/modal/Modal";
+import falcorModel from "../falcor/falcorModel";
 
 export default function NossaMetodologia() {
   return (
