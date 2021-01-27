@@ -22,14 +22,13 @@ export default function NossaMetodologia({ articles }) {
       <MainPageTitle
         wrapperStyles={`
           margin: 0;
+          padding: 1rem 0;
+          background-color: #222266;
         `}
         titleStyles={`
           margin: 0;
-          padding: 1rem 0;
           color: #fff;
           text-shadow: -1px 1px #000;
-          background-color: #001628;
-          background-image: linear-gradient(to top, #001628, #5f4aaa);
           color: #fff;
           `}
         title="Aprenda React do Zero!"
@@ -56,14 +55,6 @@ export default function NossaMetodologia({ articles }) {
             <h2>Não existe uma forma linear</h2>
 
             <p>
-              Mesmo que existam vários cursos que ensinam react, se você ainda
-              não souber a base da programação web (HTML, CSS, JS) você não
-              conseguirá entender direito. E mesmo que você já tenha um
-              conhecimento razoável de programação, não existe uma única forma
-              de aprender.
-            </p>
-
-            <p>
               Aqui neste site, nós separamos os assuntos importantes e, para
               cada assunto, você terá várias opções de vídeo ensinando a mesma
               coisa. Dessa forma, mesmo que você não tenha entendido um assunto,
@@ -79,6 +70,16 @@ export default function NossaMetodologia({ articles }) {
         </div>
 
         <BannerQuizNivelamento />
+
+        <div className={styles.footer}>
+          <div className="page-content">
+            <a href="/react-basico" className={styles.nextPageLink}>
+              Próximo Passo &raquo;
+            </a>
+          </div>
+        </div>
+
+        {/* O que é react: https://www.youtube.com/watch?v=6IuQUgeDPg0 */}
 
         <div className={styles.firstVideo}>
           {/* <ResponsiveEmbed

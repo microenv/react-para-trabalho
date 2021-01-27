@@ -6,15 +6,29 @@ import * as S from "./styles";
 export default function BannerQuizNivelamento() {
   return (
     <S.Wrapper>
-      <h3>Teste de Nivelamento</h3>
-      <p>Você está pronto para aprender React?</p>
+      <div className="page-content">
+        <S.TesteNivelamento>Teste de Nivelamento</S.TesteNivelamento>
 
-      <p>
-        Descubra se seus conhecimentos em HTML / CSS / Javascript estão bons o
-        suficiente para você não se perder enquanto estuda React!
-      </p>
+        <S.Title>Você está pronto para aprender React?</S.Title>
 
-      <Button type="primary">Fazer Quiz de Nivelamento</Button>
+        <S.Description>
+          Descubra se seus conhecimentos em HTML / CSS / Javascript estão bons o
+          suficiente para você não se perder enquanto estuda React!
+        </S.Description>
+
+        <Button
+          type="primary"
+          style={{
+            padding: "0 50px",
+            height: "50px",
+            lineHeight: "50px",
+            fontSize: "22px",
+          }}
+          onClick={() => alert("Funcionalidade em Desenvolvimento!")}
+        >
+          Fazer Quiz de Nivelamento
+        </Button>
+      </div>
     </S.Wrapper>
   );
 }

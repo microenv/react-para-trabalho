@@ -46,11 +46,6 @@ x.banner {
   font-size: 22px;
 }
 
-.firstVideo {
-  padding: 40px;
-  max-width: 1200px;
-}
-
 .highlightText {
   margin: 50px 0 50px 15vw;
   font-size: 38px;
@@ -59,4 +54,14 @@ x.banner {
 
 .NaoExisteLinear {
   max-width: 800px;
+}
+
+.footer {
+  padding: 150px 0 100px 0;
+  text-align: right;
+}
+
+.nextPageLink {
+  font-size: 28px;
+  color: #cbf;
 }
