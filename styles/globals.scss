@@ -47,6 +47,10 @@ p {
 .page-content {
   padding: 0 50px;
   max-width: 1200px;
+
+  &.noPadding {
+    padding: 0;
+  }
 }
 
 /** Sessões que possuem background escuro, então o texto precisa ser claro */

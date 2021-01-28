@@ -85,11 +85,7 @@ export default function Drawer({ currentMenu, children, noPadding }) {
             </S.Nav>
           </Affix>
         </Sider>
-        <Layout className="site-layout">
-          <Content className="site-layout-content" style={contentStyle}>
-            {children}
-          </Content>
-        </Layout>
+        <Content style={contentStyle}>{children}</Content>
       </Layout>
     </S.Wrapper>
   );
