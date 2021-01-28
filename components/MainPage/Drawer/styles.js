@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.nav`
-  background-color: #eee;
-  background-image: linear-gradient(to bottom right, #fff, #eee);
   min-height: 100vh;
 
   .ant-menu.ant-menu-dark .ant-menu-item-selected.drawer-menu-item {

@@ -1,4 +1,5 @@
 import falcor from "falcor";
+import reactBasico from "../data/react-basico";
 
 const falcorModel = new falcor.Model({
   cache: {
@@ -12,6 +13,7 @@ const falcorModel = new falcor.Model({
         done: true,
       },
     ],
+    reactBasico,
     aprenderReactDoZero: {
       articles: [
         {
@@ -48,13 +50,34 @@ const falcorModel = new falcor.Model({
   const results = await falcorModel.get(
     // ["todos", { from: 0, to: 1 }, ["name", "done"]],
     // ["todos", "length"]
+
+    // [
+    //   "aprenderReactDoZero",
+    //   "articles",
+    //   { from: 0, to: 2 },
+    //   ["video_url", "title"],
+    // ],
+    // ["aprenderReactDoZero", "articles", "length"]
+
     [
-      "aprenderReactDoZero",
-      "articles",
-      { from: 0, to: 2 },
-      ["video_url", "title"],
+      "reactBasico",
+      { from: 0, to: 100 },
+      ["sectionSlug", "sectionTitle", "sectionDescription"],
     ],
-    ["aprenderReactDoZero", "articles", "length"]
+    [
+      "reactBasico",
+      { from: 0, to: 100 },
+      "videos",
+      { from: 0, to: 100 },
+      ["title", "url", "description"],
+    ],
+    [
+      "reactBasico",
+      { from: 0, to: 100 },
+      "articles",
+      { from: 0, to: 100 },
+      ["title", "url", "description"],
+    ]
   );
   console.log("==================================");
   console.log(JSON.stringify(results, null, 2));

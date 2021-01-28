@@ -33,6 +33,12 @@ export default [
     linkTo: "/html-css-javascript",
   },
   {
+    id: "react-basico",
+    label: "React Básico",
+    icon: ClassIcon,
+    linkTo: "/react-basico",
+  },
+  {
     id: "open-source",
     label: "Contribua com a gente!",
     icon: CommunityIcon,
