@@ -34,15 +34,15 @@ export default function Drawer({ currentMenu, children, noPadding }) {
       <Layout hasSider={true}>
         <Sider
           trigger={null}
-          collapsible
-          collapsed={collapsed}
+          // collapsible
+          // collapsed={collapsed}
           width={290}
           style={{ minHeight: "100vh" }}
           breakpoint="lg"
           collapsedWidth="0"
           onBreakpoint={(broken) => {
             // console.log("onBreakpoint: ", broken);
-            setCollapsed(broken);
+            // setCollapsed(broken);
           }}
           onCollapse={(collapsed, type) => {
             console.log("onCollapse", collapsed, type);

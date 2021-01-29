@@ -2,13 +2,18 @@ import { Affix, Col, Menu, Row } from "antd";
 import { List } from "antd/lib/form/Form";
 import Sider from "antd/lib/layout/Sider";
 import React from "react";
+import getYoutubeVideoId from "../../utils/getYoutubeVideoId";
+import CardVideo from "../CardVideo";
 import FalcorMap from "../FalcorMap";
 import MainPage from "../MainPage";
+import MainPageTitle from "../MainPageTitle";
 import * as S from "./styles";
 
 export default function TrainingPage({
   currentMenu,
   siderLinkPrefix = "",
+  trainingData,
+  topicData,
   topics,
   children,
   videos,
@@ -21,21 +26,24 @@ export default function TrainingPage({
   } else {
     // @TODO ~ List Articles
     content = (
-      <FalcorMap
-        data={videos}
-        wrapperBuilder={({ children }) => <Row>{children}</Row>}
-        itemBuilder={({ key, value: { title, description, url } }) => {
-          return (
-            <Col lg={8}>
-              {title}
-              <br />
-              {description}
-              <br />
-              {url.split("/").pop()}
-            </Col>
-          );
-        }}
-      />
+      <>
+        <MainPageTitle title={topicData.title} />
+        <FalcorMap
+          data={videos}
+          wrapperBuilder={({ children }) => <Row>{children}</Row>}
+          itemBuilder={({ key, value: { title, description, url } }) => {
+            return (
+              <Col lg={8}>
+                <CardVideo
+                  youtubeId={getYoutubeVideoId(url)}
+                  title={title}
+                  description={description}
+                />
+              </Col>
+            );
+          }}
+        />
+      </>
     );
   }
 
@@ -54,15 +62,19 @@ export default function TrainingPage({
                 <FalcorMap
                   data={topics}
                   wrapperBuilder={({ children }) => (
-                    <Menu mode="inline" theme="dark">
+                    <Menu
+                      mode="inline"
+                      theme="dark"
+                      defaultSelectedKeys={[topicData && topicData.slug]}
+                    >
                       {children}
                     </Menu>
                   )}
-                  itemBuilder={({ key, $__path, value }) => {
+                  itemBuilder={({ key, $__path, value: { title } }) => {
                     const slug = $__path[$__path.length - 1];
                     return (
-                      <Menu.Item key={key}>
-                        <a href={`${siderLinkPrefix}/${slug}`}>{value.title}</a>
+                      <Menu.Item key={slug}>
+                        <a href={`${siderLinkPrefix}/${slug}`}>{title}</a>
                       </Menu.Item>
                     );
                   }}
