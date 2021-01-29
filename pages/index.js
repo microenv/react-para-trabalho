@@ -25,20 +25,20 @@ export default function Home() {
               <p>Se você não sabe nada de React ou programação.</p>
             </a>
 
-            <a href="/nossa-metodologia" className={styles.card}>
+            {/* <a href="/nossa-metodologia" className={styles.card}>
               <h3>Nossa metodologia &rarr;</h3>
               <p>Como nós vamos te ensinar a programar.</p>
-            </a>
+            </a> */}
 
-            <a href="/open-source" className={styles.card}>
+            {/* <a href="/open-source" className={styles.card}>
               <h3>Totalmente grátis &rarr;</h3>
               <p>Não precisa pagar para começar a estudar.</p>
-            </a>
+            </a> */}
 
-            <a href="/open-source" className={styles.card}>
+            {/* <a href="/open-source" className={styles.card}>
               <h3>Open Source &rarr;</h3>
               <p>Gostaria de contribuir, deixando este curso ainda melhor?</p>
-            </a>
+            </a> */}
           </div>
         </main>
 

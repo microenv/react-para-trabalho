@@ -14,12 +14,12 @@ export default [
     icon: HomeIcon,
     linkTo: "/",
   },
-  {
-    id: "nossa-metodologia",
-    label: "Nossa Metodologia",
-    icon: ClassIcon,
-    linkTo: "/nossa-metodologia",
-  },
+  // {
+  //   id: "nossa-metodologia",
+  //   label: "Nossa Metodologia",
+  //   icon: ClassIcon,
+  //   linkTo: "/nossa-metodologia",
+  // },
   {
     id: "comece-por-aqui",
     label: "Comece por Aqui",
@@ -38,10 +38,10 @@ export default [
     icon: ClassIcon,
     linkTo: "/react-basico",
   },
-  {
-    id: "open-source",
-    label: "Contribua com a gente!",
-    icon: CommunityIcon,
-    linkTo: "/open-source",
-  },
+  // {
+  //   id: "open-source",
+  //   label: "Contribua com a gente!",
+  //   icon: CommunityIcon,
+  //   linkTo: "/open-source",
+  // },
 ];
