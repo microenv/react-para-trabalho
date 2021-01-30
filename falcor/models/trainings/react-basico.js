@@ -91,7 +91,20 @@ export default function (root) {
         "entendendo-sobre-componentes-react": {
           title: "Entendendo Sobre Componentes",
           description: "",
-          videos: [],
+          videos: [
+            {
+              url: "https://www.youtube.com/watch?v=4yL_1dGbC6U",
+              title: "O que são React Hooks",
+              description:
+                "O React Hooks permite usar estado e outras funcionalidades em componentes sem utilizar uma classe",
+            },
+            {
+              url: "https://www.youtube.com/watch?v=Em1beFfp_Rk",
+              title: "Criando Nosso Primeiro Componente",
+              description:
+                "Aprenda a criar um componente bem simples de contador",
+            },
+          ],
           articles: [],
         },
         "react-classes-vs-hooks": {
