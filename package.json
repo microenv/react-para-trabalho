@@ -5,13 +5,15 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "_start": "next start",
+    "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "@ant-design/icons": "^4.4.0",
     "@fontsource/baloo-tamma-2": "^4.1.0",
     "@fontsource/patua-one": "^4.1.0",
     "antd": "^4.10.3",
+    "express": "^4.17.1",
     "falcor": "^2.2.2",
     "next": "10.0.5",
     "react": "17.0.1",
