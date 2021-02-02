@@ -1,5 +1,6 @@
 const express = require("express");
 const next = require("next");
+const AWSXRay = require("aws-xray-sdk");
 
 const port = parseInt(process.env.PORT, 10) || 3000;
 const dev = process.env.NODE_ENV !== "production";
@@ -19,6 +20,8 @@ app
     //   return app.render(req, res, "/about", req.params);
     // });
 
+    server.use(AWSXRay.express.openSegment("ReactParaTrabalho"));
+
     server.get("*", (req, res) => {
       return handle(req, res);
     });
@@ -27,6 +30,8 @@ app
       if (err) throw err;
       console.log(`> Ready on http://localhost:${port}`);
     });
+
+    server.use(AWSXRay.express.closeSegment());
   })
   .catch((ex) => {
     console.log(ex);
