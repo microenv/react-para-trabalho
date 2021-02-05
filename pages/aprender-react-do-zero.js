@@ -7,14 +7,20 @@ import Modal from "antd/lib/modal/Modal";
 import falcorModel from "../falcor/falcorModel";
 import { useState } from "react";
 import BannerQuizNivelamento from "../components/BannerQuizNivelamento";
+import { Row, Col } from 'antd';
+import React, {Fragment} from 'react'; 
+import Media from 'react-media';
 
 export default function NossaMetodologia({ articles }) {
   const [currentArticle, setCurrentArticle] = useState({
     id: 0,
   });
 
+  
+
   return (
     <MainPage currentMenu="comece-por-aqui" noPadding>
+    
       <Head>
         <title>Aprender React do Zero!</title>
       </Head>
@@ -39,7 +45,7 @@ export default function NossaMetodologia({ articles }) {
           <h2>Como começar a aprender</h2>
           <p className={styles.firstParagraph}>
             Se você nunca programou ou sabe apenas o básico de programação, este
-            lugar é pra você. Mas para que você aprenda a programar com React, é
+            lugar é pra você. <br /> Mas para que você aprenda a programar com React, é
             necessário primeiro aprender HTML/CSS/Javascript.
             <br />
             <br />
