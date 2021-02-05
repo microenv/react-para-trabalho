@@ -27,3 +27,6 @@ export const Description = styled.p`
   color: #77a;
   max-width: 500px;
 `;
+
+
+
