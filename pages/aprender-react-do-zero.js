@@ -45,7 +45,7 @@ export default function NossaMetodologia({ articles }) {
           <h2>Como começar a aprender</h2>
           <p className={styles.firstParagraph}>
             Se você nunca programou ou sabe apenas o básico de programação, este
-            lugar é pra você. <br /> Mas para que você aprenda a programar com React, é
+            lugar é pra você.  Mas para que você aprenda a programar com React, é
             necessário primeiro aprender HTML/CSS/Javascript.
             <br />
             <br />
