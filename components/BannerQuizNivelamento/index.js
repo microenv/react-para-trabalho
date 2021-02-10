@@ -27,7 +27,8 @@ export default function BannerQuizNivelamento() {
             padding: "0 50px",
             height: "50px",
             lineHeight: "50px",
-            fontSize: "18px",
+            fontSize: "3vw",
+            flexFlow: "column",
           }}
           onClick={() => alert("Funcionalidade em Desenvolvimento!")}
         >
