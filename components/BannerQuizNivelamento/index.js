@@ -21,19 +21,10 @@ export default function BannerQuizNivelamento() {
           suficiente para você não se perder enquanto estuda React!
         </S.Description>
 
-        <Button
-          type="primary"
-          style={{
-            padding: "0 50px",
-            height: "50px",
-            lineHeight: "50px",
-            fontSize: "3vw",
-            flexFlow: "column",
-          }}
-          onClick={() => alert("Funcionalidade em Desenvolvimento!")}
-        >
-          Fazer Quiz de Nivelamento
-        </Button>
+        <S.MyButton type="primary" onClick={() => alert("estou em desenvolvimento!")}>
+          Fazer Quiz de Nivelamento</S.MyButton>
+
+        
       </div>
     </S.Wrapper>
   );
