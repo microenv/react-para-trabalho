@@ -28,5 +28,26 @@ export const Description = styled.p`
   max-width: 500px;
 `;
 
+export const MyButton = styled.button`
+  background: #5F4AAA;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0 50px;
+  height: 50px;
+  display: flex;
+  flexFlow: column;
+  align-items: center;
+  @media (min width: 379px) and (max-width: 600px){
+    line-height: 30px;
+    font-size: 15px;
+    flex-direction: row;
+  }
+  @media (min-width:290px) and (max-width: 378x){
+    font-size: 10px;
+    flex-direction: row;
+  }
+
+`;
+
 
 
