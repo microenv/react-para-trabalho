@@ -14,8 +14,12 @@ x.banner {
   background-size: 1200px auto;
   background-position: left top;
   background-repeat: no-repeat;
-  height: 670px;
+  height: 500px;
   background-color: #5f4aaa;
+
+  @media (max-width:600px) {
+    height: 300px;
+  }
 }
 
 
@@ -31,7 +35,11 @@ x.banner {
   background-size: 1200px auto;
   background-position: left top;
   background-repeat: no-repeat;
-  min-height: 670px;
+  min-height: 500px;
+
+  @media (max-width:600px) {
+    height: 300px;
+  }
 
   h1,
   h2,
@@ -40,6 +48,7 @@ x.banner {
   h5,
   h6 {
     color: #00dbff;
+    font-size: 22px;
   }
 
 
@@ -48,23 +57,31 @@ x.banner {
 .firstParagraph {
   margin: 0;
   max-width: 400px;
-  font-size: 22px;
+  font-size: 20px;
+  
 }
 
 .highlightText {
-  margin: 50px 0 50px 15vw;
-  font-size: 38px;
+  margin:0;
+  font-size: 20px;
   color: #faf;
+  max-width: 800px;
 }
 
 .NaoExisteLinear {
   margin: 0;
   max-width: 800px;
+  h2{
+    font-size: 22px;
+  }
 }
 
 .footer {
-  padding: 150px 0 100px 0;
+  padding: 50px 0px;
   text-align: right;
+  a{
+    font-size: 15px;
+  }
 }
 
 .nextPageLink {
@@ -75,7 +92,7 @@ x.banner {
 
 
 
-@media all and (max-width: 600px){
+@media (max-width: 600px){
 
   .contentWrapper{
     flex-flow: column;
@@ -83,16 +100,16 @@ x.banner {
   .content{
 
     h1, h3, h4, h5, h6{
-      font-size: 6vw;  
+      font-size: 18px;  
     }
     h2{
-      font-size: 6vw;
+      font-size: 18px;
       padding: 0px 0px 20px 18px;
       margin-bottom: 10px;
 
     }
     p{
-      font-size: 5vw;
+      font-size: 16px;
       text-align: justify-all;
       padding: 0px 0px 0px 18px;
       max-width: 500px;
@@ -105,25 +122,25 @@ x.banner {
 .NaoExisteLinear{
   h2{
     padding: 30px 0px 30px 0px;
-    font-size: 6vw;
+    font-size: 18px;
     margin: 0;
   }
   p{
-    font-size: 5vw;
+    font-size: 16px;
     text-align: justify-all;
     margin: 0;
     max-width: 500px;
   }
 }
 .highlightText{
-  font-size: 5vw;
+  font-size: 16px;
   margin: 0;
   padding: 20px;
   max-width: 500px;
 }
 
 .nextPageLink{
-  font-size: 5vw;
+  font-size: 16px;
 }
 
 .footer{
