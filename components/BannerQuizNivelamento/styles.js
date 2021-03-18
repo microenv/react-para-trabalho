@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   padding: 100px 0;
   background: #222266;
+
+  @media (max-width: 677px) {
+    display: none;
+  }
 `;
 
 export const TesteNivelamento = styled.p`

@@ -93,7 +93,6 @@ export default function NossaMetodologia({ articles }) {
             })}
           </ul>
           */}
-          <div>{JSON.stringify(articles)}</div>
           <Modal
             title="Modal 1000px width"
             centered

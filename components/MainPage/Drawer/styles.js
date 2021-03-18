@@ -1,15 +1,13 @@
+import { Col } from "antd";
 import styled from "styled-components";
 
 export const Wrapper = styled.nav`
   min-height: 100vh;
+`;
 
-  .ant-menu.ant-menu-dark .ant-menu-item-selected.drawer-menu-item {
-    background-color: #226;
-  }
-
-  .main-sider {
-    border-right: 5px solid #226;
-  }
+export const SiderCol = styled(Col)`
+  background: #011529;
+  border-right: 5px solid #1C8EF9;
 `;
 
 export const Header = styled.div`

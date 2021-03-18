@@ -25,6 +25,11 @@ h6 {
 
 h2 {
   font-size: 34px;
+
+  @media (max-width: 678px) {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
 }
 
 a {
@@ -45,8 +50,15 @@ p {
 }
 
 .page-content {
-  padding: 0 50px;
   max-width: 1200px;
+  
+  @media (max-width: 677px) {
+    padding: 0 1rem;
+  }
+  
+  @media (min-width: 678px) {
+    padding: 0 50px;
+  }
 
   &.noPadding {
     padding: 0;

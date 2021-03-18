@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import * as S from "./styles";
 import styled from "styled-components";
 import sidemenus from "../sidemenus";
-import { Divider, Menu, Layout, Affix } from "antd";
+import { Divider, Menu, Layout, Affix, Row, Col } from "antd";
 import {
   AppstoreOutlined,
   MailOutlined,
@@ -31,62 +31,67 @@ export default function Drawer({ currentMenu, children, noPadding }) {
 
   return (
     <S.Wrapper>
-      <Layout hasSider={true}>
-        <Sider
-          trigger={null}
-          // collapsible
-          // collapsed={collapsed}
-          width={290}
-          style={{ minHeight: "100vh" }}
-          breakpoint="lg"
-          collapsedWidth="0"
-          onBreakpoint={(broken) => {
-            // console.log("onBreakpoint: ", broken);
-            // setCollapsed(broken);
-          }}
-          onCollapse={(collapsed, type) => {
-            console.log("onCollapse", collapsed, type);
-          }}
-          className="main-sider"
-        >
-          <Affix>
-            <S.Header>
-              <S.HeaderImage
-                src="https://ionicframework.com/docs/assets/icons/logo-react-icon.png"
-                alt="React Para Trabalho"
-              />
-              <S.HeaderTitle>React Para Trabalho</S.HeaderTitle>
-              <S.HeaderSubtitle>
-                Aprenda React do zero até nível senior
-              </S.HeaderSubtitle>
-            </S.Header>
-            <S.Nav>
-              <Menu
-                onClick={onClickMenu}
-                defaultSelectedKeys={[currentMenu]}
-                defaultOpenKeys={[]}
-                mode="inline"
-                theme="dark"
-              >
-                {sidemenus.map(
-                  ({ id, label, icon: Icon, linkTo }, mainIndex) => {
-                    return (
-                      <Menu.Item
-                        key={`${id || mainIndex}`}
-                        icon={<Icon />}
-                        className="drawer-menu-item"
-                      >
-                        <a href={linkTo}>{label}</a>
-                      </Menu.Item>
-                    );
-                  }
-                )}
-              </Menu>
-            </S.Nav>
-          </Affix>
-        </Sider>
-        <Content style={contentStyle}>{children}</Content>
-      </Layout>
+      <Row>
+        <S.SiderCol sm={0} xs={0} md={0} lg={5}>
+          <Sider
+            trigger={null}
+            // collapsible
+            // collapsed={collapsed}
+            width="100%"
+            style={{ minHeight: "100vh" }}
+            breakpoint="lg"
+            // collapsed={false}
+            collapsible={false}
+            collapsedWidth="0"
+            onBreakpoint={(broken) => {
+              // console.log("onBreakpoint: ", broken);
+              // setCollapsed(broken);
+            }}
+            onCollapse={(collapsed, type) => {
+              console.log("onCollapse", collapsed, type);
+            }}
+          >
+            <Affix>
+              <S.Header>
+                <S.HeaderImage
+                  src="https://ionicframework.com/docs/assets/icons/logo-react-icon.png"
+                  alt="React Para Trabalho"
+                />
+                <S.HeaderTitle>React Para Trabalho</S.HeaderTitle>
+                <S.HeaderSubtitle>
+                  Aprenda React do zero até nível senior
+                </S.HeaderSubtitle>
+              </S.Header>
+              <S.Nav>
+                <Menu
+                  onClick={onClickMenu}
+                  defaultSelectedKeys={[currentMenu]}
+                  defaultOpenKeys={[]}
+                  mode="inline"
+                  theme="dark"
+                >
+                  {sidemenus.map(
+                    ({ id, label, icon: Icon, linkTo }, mainIndex) => {
+                      return (
+                        <Menu.Item
+                          key={`${id || mainIndex}`}
+                          icon={<Icon />}
+                          className="drawer-menu-item"
+                        >
+                          <a href={linkTo}>{label}</a>
+                        </Menu.Item>
+                      );
+                    }
+                  )}
+                </Menu>
+              </S.Nav>
+            </Affix>
+          </Sider>
+        </S.SiderCol>
+        <Col lg={19}>
+          <Content style={contentStyle}>{children}</Content>
+        </Col>
+      </Row>
     </S.Wrapper>
   );
 }
