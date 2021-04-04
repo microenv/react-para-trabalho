@@ -19,7 +19,8 @@ app
     // server.get("/about", (req, res) => {
     //   return app.render(req, res, "/about", req.params);
     // });
-
+    
+    // @TODO ~ move this below AWSXRay
     server.use('/_next', express.static('_next'));
     server.use(AWSXRay.express.openSegment("ReactParaTrabalho"));
 
