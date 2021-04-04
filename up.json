@@ -1,6 +1,6 @@
 {
   "name": "react-para-trabalho",
-  "profile": "sub",
+  "profile": "giovanneafonso",
   "regions": ["us-east-1"],
   "lambda": {
     "memory": 256,
