@@ -14,7 +14,7 @@ export default function Home() {
 
         <main className={styles.main}>
           <h1 className={styles.title}>
-            Aprenda React <span>com vídeos!</span>
+            Aprenda React <span>assistindo vídeos!</span>
           </h1>
 
           <p className={styles.description}>React Para Trabalho</p>

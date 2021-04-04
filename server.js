@@ -20,9 +20,8 @@ app
     //   return app.render(req, res, "/about", req.params);
     // });
     
-    // @TODO ~ move this below AWSXRay
-    server.use('/_next', express.static('_next'));
     server.use(AWSXRay.express.openSegment("ReactParaTrabalho"));
+    server.use('/_next', express.static('_next'));
 
     server.get("*", (req, res) => {
       return handle(req, res);
